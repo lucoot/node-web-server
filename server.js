@@ -49,11 +49,12 @@ app.get('/', (req, res) => {
        // animal: 'dog'
 
 
-      
+
         res.render('home.hbs', {
         pageTitle: 'Le Home Page',
         welcomeMessage : 'This is a welcome message',
-        currentYear: new Date().getFullYear()
+        currentYear: new Date().getFullYear(),
+        ip: req.ip
     });
     
 
@@ -80,6 +81,7 @@ app.get('/maintenance', (req, res) => {
     pageTitle: 'Maint Page',
     welcomeMessage : 'Down for Maintenance',
     currentYear: new Date().getFullYear()
+
 });
 
 
